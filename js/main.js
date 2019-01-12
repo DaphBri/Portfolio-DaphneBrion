@@ -1,4 +1,4 @@
-// burger - click on : toggle active on .burger - .menu - (circle??? = lights)
+// burger - click on : toggle active on .burger - .menu - //.arrow-onn, glass-off, title-off
 let burger=$(".burger");
 let menu=$("nav");
 
@@ -16,7 +16,7 @@ burger.click(function(){
     
 });
 
-//Circle Lightning button: click on : toggle active on .title - img.light
+//Circle Lightning button: click on : toggle active on .title - img.light - burger - arrow
 let lightButton=$(".circle");
 //let glass=$("img.light");
 //let title=$(".title");
@@ -42,21 +42,23 @@ $(window).scroll(function(){
 })
 
 
-//a remettre correctement PORTFOLIO
+//PORTFOLIO - workpage
+
+
+
 
 let lis= document.querySelectorAll(".nav>li");
 
 lis.forEach((li) => {
-    li.addEventListener("click", switchActiveLi);
-    
+    li.addEventListener("click", switchActiveLi);   
 });
 
-// == égale à
-//=== super égale à, inclusive les chiffre et lettre
+//Fonction
 
 function switchActiveLi(ev){
     let clickedLi = ev.currentTarget;
-    let activeLi=document.querySelector(".nav>li.active")
+    let activeLi=document.querySelector(".nav>li.active");
+    // let activeLi=document.querySelector(".nav>li>.knop.active");
     if (activeLi !== null){
         activeLi.classList.remove("active");
     }
