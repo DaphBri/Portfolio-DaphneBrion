@@ -45,20 +45,20 @@ $(window).scroll(function(){
 //PORTFOLIO - workpage
 
 
-
-
 let lis= document.querySelectorAll(".nav>li");
 
 lis.forEach((li) => {
     li.addEventListener("click", switchActiveLi);   
 });
 
-//Fonction
+//Fonction when click on li : 
+//1) active on click and off the rest
+//2) compair data-set type of a and project and show (remove 'hidden') the clicked-one
 
 function switchActiveLi(ev){
     let clickedLi = ev.currentTarget;
     let activeLi=document.querySelector(".nav>li.active");
-    // let activeLi=document.querySelector(".nav>li>.knop.active");
+
     if (activeLi !== null){
         activeLi.classList.remove("active");
     }
@@ -75,3 +75,8 @@ function switchActiveLi(ev){
         }
     });
 }
+
+//after each refresh reset page on top
+$(document).ready(function(){
+    $(this).scrollTop(0);
+    });

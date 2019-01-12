@@ -7,6 +7,9 @@ footer{
     color: #767766;
     font-size: 1em;
     padding: 0 0 10px;
+    @media screen and (min-width: 1200px){
+        font-size: 1.3em;
+    }
     img{
         width:100%;
         position: absolute;
@@ -24,6 +27,9 @@ footer{
             transform: rotate(-11deg);
             margin-right: 24px;
             padding-bottom: 26px;
+            @media screen and (min-width: 1200px){
+                padding-bottom: 35px;
+            }
         }
         
         .cr{
