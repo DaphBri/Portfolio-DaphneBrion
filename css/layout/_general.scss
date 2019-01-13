@@ -5,6 +5,8 @@ main {
         position: fixed;
         top: -1400px;
         left: 0;
+        width: 100%;
+        height: 80px;
         z-index: 15;
 
         &.active {
@@ -12,19 +14,29 @@ main {
         }
 
         transition: all 0.3s ease-in-out;
+        @media screen and (max-width: 640px) {
+            height: 40px;
+        }
 
+        @media screen and (min-width: 640px) and (max-width: 940px) {
+            height: 60px;
+        }
         .banner {
             position: relative;
             font-family: 'Roboto Condensed', sans-serif;
             color: #767766;
             font-size: 1.8em;
+            width: 100%;
+            height: 80px;
 
             @media screen and (max-width: 640px) {
                 font-size: 1.4em;
+                height: 40px;
             }
 
             @media screen and (min-width: 640px) and (max-width: 940px) {
                 font-size: 1.6em;
+                height: 60px;
             }
 
             img {
@@ -60,10 +72,12 @@ main {
 
                     @media screen and (max-width: 640px) {
                         height: 40px;
+                        width: 80px;
                     }
 
                     @media screen and (min-width: 640px) and (max-width: 940px) {
                         height: 60px;
+                        width: 90px;
                     }
 
                     a {
@@ -79,7 +93,6 @@ main {
                     }
                 }
             }
-
         }
     }
 
@@ -99,15 +112,11 @@ main {
                 .headerWrapper {
                     &::before {
                         content: '';
-
-                        //background: #65625d;
                         background: #65625121;
                         position: absolute;
-                        //top: 143px;
                         top: -180px;
                         left: -19px;
                         width: 119%;
-                        //height: 57px;
                         height: 404px;
                         transform: rotate(11deg);
                         z-index: -1;
@@ -162,7 +171,6 @@ main {
                             font-size: 4.5em;
                             padding-top: 18px;
                         }
-
                     }
 
                     h3 {
@@ -185,7 +193,6 @@ main {
                             font-size: 2.1em;
                             line-height: 45px;
                         }
-
                     }
                 }
             }
@@ -210,7 +217,7 @@ main {
 
                         &:after {
                             content: '';
-                            background: linear-gradient(to top right, rgba(158, 120, 76, 0.74), rgba(171, 223, 192, 0.658));
+                            background: linear-gradient(to top right, rgba(158, 120, 76, 0.74), rgba(171, 223, 192, 0.658)) , #29655290;
                             position: absolute;
                             top: 0;
                             left: 0;
@@ -224,7 +231,6 @@ main {
 
                         &:hover:after {
                             opacity: 1;
-                            //filter: blur(5px);
                         }
 
                         &:hover .image-cover img {
@@ -236,13 +242,11 @@ main {
                             border-radius: 30px;
                             overflow: hidden;
 
-
                             img {
                                 display: block;
                                 max-width: 340px;
                                 border-radius: 30px;
                                 width: 100%;
-
                             }
                         }
 
@@ -274,33 +278,8 @@ main {
                                     margin: 110px 10px 15px;
                                 }
                             }
-
-                            // .button {
-                            //     font-family: 'Amatic SC', cursive;
-                            //     font-size: 2.5em;
-                            //     display: inline-block;
-                            //     border: 2px solid #65625d;
-                            //     border-radius: 40px;
-                            //     width: 80px;
-                            //     height: 80px;
-                            //     padding: 12px;
-                            //     text-align: center;
-                            //     transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-
-                            //     color: #65625d;
-                            //     background: #fcef37;
-
-                            //     &:hover {
-                            //         border: 2px solid #fcef37;
-                            //         background: #65625d77;
-                            //         color:  #fcef37;
-                            //     }
-                            //}
                         }
-
-
                     }
-
                 }
             }
         }
@@ -361,32 +340,39 @@ main {
 
                 .small {
                     display: none;
-
                     @media screen and (max-width: 640px) {
                         display: initial;
                     }
-                }
+                    a{
+                        font-family: 'Ubuntu', sans-serif;
+                        font-size: 1em;
+                        text-decoration: none;
+                        color: #767766;
+                        &:hover{
+                            color: #fcef37;
+                        }
+                    }
+                }               
             }
         }
-
     }
 }
 
 
 // Contact - page
 section.contact {
-    padding-bottom: 160px;
+    padding-bottom: 80px;
 
     @media screen and (min-width: 640px) and (max-width: 940px) {
-        padding-bottom: 260px;
+        padding-bottom: 180px;
     }
 
     @media screen and (min-width: 940px) and (max-width: 1200px) {
-        padding-bottom: 360px;
+        padding-bottom: 200px;
     }
 
     @media screen and (min-width: 1200px) {
-        padding-bottom: 460px;
+        padding-bottom: 300px;
     }
 }
 
@@ -400,8 +386,6 @@ section.contact {
 
         form {
             fieldset {
-                //background: url(../../img/formulier_back.jpg) repeat;
-                //background-size: 100%;
                 background: #65625121;
                 border:1px solid #c4bfbf;
                 border-radius: 30px;
@@ -444,10 +428,8 @@ section.contact {
                             @media screen and (max-width: 750px) {
                                 max-width: 100%;
                             }
-
                         }
                     }
-
                 }
 
                 .message {
@@ -469,8 +451,6 @@ section.contact {
                         min-height: 200px;
                     }
                 }
-
-
             }
 
             .submit {
@@ -500,12 +480,9 @@ section.contact {
                         background: #dacdb877;
                         color: #fcef37;
                     }
-
                 }
-
             }
         }
-
     }
 }
 
@@ -543,12 +520,11 @@ section.contact {
                     height: 345px;
                 }
             }
-       }
+        }
     }
 }
 //Page Work-Content
 .col-md-12 {
-   
     padding: 0 42px;
 
     //header-text block 
@@ -580,11 +556,9 @@ section.contact {
                 font-size: 2.1em;
                 line-height: 45px;
             }
-
         }
 
         .me-text {
-
             font-size: 1.6em;
             line-height: 40px;
             margin: 0 0 50px;
@@ -657,7 +631,6 @@ section.contact {
                     padding-top: 4px;
                     display: none;
                 }
-
             }
             transition: all 0.3s ease-in-out;
             &:hover a img{
@@ -717,8 +690,7 @@ section.contact {
                 padding: 0;
                 border:none;
                 border-radius:0;
-                flex-direction: column-reverse;
-                
+                flex-direction: column-reverse;               
             }
             p {
                 font-size: 3em;
@@ -768,7 +740,6 @@ section.contact {
                     background: #65625d77;
                     color: #fcef37;
                 }
-
             }
 
             .subtitle-button {
@@ -776,36 +747,30 @@ section.contact {
                 font-size: 1.2em;
                 @media screen and (max-width: 940px) {                    
                     display: none;
+                }               
+            }            
+            .overflow {
+                max-height: 700px;
+                overflow-x: overlay;
+                
+                @media screen and (max-width: 640px) {
+                    max-height: 550px;
+                    padding-top: 3px;                       
+                    border-top: 1px solid #c4bfbf;
+                }
+        
+                @media screen and (min-width: 640px) and (max-width: 940px) {
+                    max-height: 600px;
+                }
+    
+                @media screen and (min-width: 940px) and (max-width: 1340px) {
+                    max-height: 650px;
                 }
                 
+                img {
+                    width: 100%;                        
+                }                    
             }            
-                .overflow {
-                    max-height: 700px;
-                    overflow-x: overlay;
-                    
-                    @media screen and (max-width: 640px) {
-                        max-height: 550px;
-                        padding-top: 3px;
-                        
-                        border-top: 1px solid #c4bfbf;
-                    }
-        
-                    @media screen and (min-width: 640px) and (max-width: 940px) {
-                        max-height: 600px;
-                    }
-        
-                    @media screen and (min-width: 940px) and (max-width: 1340px) {
-                        max-height: 650px;
-                    }
-                    
-                    img {
-                        width: 100%;
-                        
-                    }
-                    
-                }
-
-            
         }
 
         .hidden {
