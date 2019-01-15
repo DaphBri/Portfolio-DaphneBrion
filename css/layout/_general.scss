@@ -750,21 +750,21 @@ section.contact {
                 }               
             }            
             .overflow {
-                max-height: 700px;
+                max-height: 640px;
                 overflow-x: overlay;
                 
                 @media screen and (max-width: 640px) {
-                    max-height: 550px;
+                    max-height: 260px;
                     padding-top: 3px;                       
                     border-top: 1px solid #c4bfbf;
                 }
         
                 @media screen and (min-width: 640px) and (max-width: 940px) {
-                    max-height: 600px;
+                    max-height: 440px;
                 }
     
                 @media screen and (min-width: 940px) and (max-width: 1340px) {
-                    max-height: 650px;
+                    max-height: 550px;
                 }
                 
                 img {
