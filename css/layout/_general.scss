@@ -682,13 +682,15 @@ section.contact {
             flex-direction: column;
             align-items: center;
             padding: 10px 25px 25px;
-            border: 1px black solid;
+            background: #65625121;
+            border: 1px solid #c4bfbf;
             border-radius: 30px;
             width: 100%;
             text-align: center;
             @media screen and (max-width: 640px) {
                 padding: 0;
                 border:none;
+                background: none;
                 border-radius:0;
                 flex-direction: column-reverse;               
             }
