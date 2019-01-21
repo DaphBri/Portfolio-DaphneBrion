@@ -42,7 +42,7 @@ $(window).scroll(function(){
 })
 
 
-//PORTFOLIO - workpage
+//PORTFOLIO - workpage-----------------------------------
 
 
 let lis= document.querySelectorAll(".nav>li");
@@ -66,15 +66,47 @@ function switchActiveLi(ev){
 
     let a = clickedLi.querySelector("a");
     let allProjects=document.querySelectorAll (".project");
-   
+    //let images=document.querySelectorAll ("image"); //BW: added images
+
     allProjects.forEach((project) => {
         if(project.dataset.type === a.dataset.type || a.dataset.type === '') {
             project.classList.remove("hidden");
-        } else {
+	    let genre = a.dataset.type;
+	    if (genre === "all") {
+	        $('.image').show();
+	    } else {
+	        //BW: here we can get the style and use that to show it
+		console.log("Genre: "+genre); //debug
+		$('.image').hide();
+		$('[data-style="'+genre+'"]').show();
+	    }
+	} else {
             project.classList.add("hidden");
         }
     });
 }
+
+
+//----working but not beautifull-------------
+
+// let pictures= document.querySelectorAll(".pictures img");
+
+// pictures.forEach((picture) => {
+//     picture.addEventListener("click", switchActivePic);   
+// });
+
+// function switchActivePic(ev){
+//     let clickedPic = ev.currentTarget;
+//     let activePic=document.querySelector(".pictures img.active");
+
+//     if (activePic !== null){
+//         activePic.classList.remove("active");
+//     }
+//     clickedPic.classList.add("active");
+// } 
+
+
+//--------------------
 
 //after each refresh reset page on top
 $(document).ready(function(){
