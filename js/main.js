@@ -109,6 +109,6 @@ function switchActiveLi(ev){
 //--------------------
 
 //after each refresh reset page on top
-$(document).ready(function(){
-    $(this).scrollTop(0);
-    });
+// $(document).ready(function(){
+//     $(this).scrollTop(0);
+//     });

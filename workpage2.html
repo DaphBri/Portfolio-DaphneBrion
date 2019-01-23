@@ -7,6 +7,10 @@
   <title>Daphne Brion - Portfolio</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
     crossorigin="anonymous">
+
+    <link href="//cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.css" type="text/css" rel="stylesheet" />
+    <link href="//cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.gallery.min.css" type="text/css" rel="stylesheet" />
+    
     <link rel="stylesheet" href="css/style.min.css">
 
 </head>
@@ -88,7 +92,8 @@
             </ul>
 
             <!-- website content frame -->
-            <div class="projects" >
+            <div class="projects" data-featherlight-gallery
+            data-featherlight-filter=".image">
               <!-- website box -->
               <div class="project" data-type="all">
                 <p>
@@ -126,14 +131,14 @@
 
               <div class="overflow">
                 <div class="pictures">
-                    <div class="image" data-style="bw"><img src="img/bw-sorrowtree.jpg" alt=""></div>
-                    <div class="image" data-style="bw"><img src="img/bw-spanning.jpg" alt=""></div>
-                    <div class="image" data-style="struc"><img src="img/bw-luca.jpg" alt=""></div>
-                    <div class="image" data-style="struc"><img src="img/bw-window.jpg" alt=""></div>
-                    <div class="image" data-style="athmos"><img src="img/bw-sorrowtree.jpg" alt=""></div>
-                    <div class="image" data-style="athmos"><img src="img/bw-spanning.jpg" alt=""></div>
-                    <div class="image" data-style="fauna"><img src="img/bw-luca.jpg" alt=""></div>
-                    <div class="image" data-style="fauna"><img src="img/bw-window.jpg" alt=""></div>
+                    <a href="img/bw-sorrowtree.jpg" class="image" data-style="bw"><img src="img/bw-sorrowtree.jpg" alt=""></a>
+                    <a href="img/bw-spanning.jpg" class="image" data-style="bw"><img src="img/bw-spanning.jpg" alt=""></a>
+                    <a href="img/bw-luca.jpg" class="image" data-style="struc"><img src="img/bw-luca.jpg" alt=""></a>
+                    <a href="img/bw-window.jpg" class="image" data-style="struc"><img src="img/bw-window.jpg" alt=""></a>
+                    <a href="img/bw-sorrowtree.jpg" class="image" data-style="athmos"><img src="img/bw-sorrowtree.jpg" alt=""></a>
+                    <a href="img/bw-spanning.jpg" class="image" data-style="athmos"><img src="img/bw-spanning.jpg" alt=""></a>
+                    <a href="img/bw-luca.jpg" class="image" data-style="fauna"><img src="img/bw-luca.jpg" alt=""></a>
+                    <a href="img/bw-window.jpg" class="image" data-style="fauna"><img src="img/bw-window.jpg" alt=""></a>
                 </div>
               </div>
 
@@ -146,6 +151,11 @@
     </section>
   </main>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  
+  
+  <script src="//code.jquery.com/jquery-latest.js"></script>
+	<script src="//cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="//cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.gallery.min.js" type="text/javascript" charset="utf-8"></script>
+  
   <script src="js/main.js"></script>
 </body>
 
