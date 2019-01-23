@@ -821,6 +821,9 @@ section.contact {
     padding: 0px 50px 50px;
     max-width: 1200px;
     margin: 0 auto;
+    @media screen and (max-width: 640px) {
+        padding: 0px 35px 35px;
+    }
     .project{
         padding: 0px 25px 25px;
         background: none;
@@ -856,6 +859,8 @@ section.contact {
             img{
                 height: 200px;
                 cursor: pointer;
+                display: block;
+                padding: 2px;
                 &.active{
                     height:750px;
                 }
