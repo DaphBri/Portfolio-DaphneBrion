@@ -9,12 +9,35 @@ footer{
     @media screen and (min-width: 1200px){
         font-size: 1.3em;
     }
-    img{
+    .bottom{
         width:100%;
         position: absolute;
         bottom: -18px;
         left:0;
+        z-index: -1;
     }
+    .social{
+        z-index: 1;
+        margin-bottom: 7%;
+        text-align: center;
+        @media screen and (max-width: 740px){
+            margin-bottom: 2%;
+        }
+        a { 
+            cursor: pointer;
+            text-decoration: none;
+            margin: 0px 1%;
+            .git{
+                width: 7%;
+                max-width: 45px;
+                opacity: 0.4;
+                &:hover{
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+    
     .box{
         height: 100%;
         display: flex;
@@ -23,6 +46,12 @@ footer{
         align-items: flex-end;
         padding-bottom: 6.5%;
         padding-right: 3px;
+        // a { 
+        //     cursor: pointer;
+        //     .git{
+        //         width: 20%;
+        //     }
+        // }
         .by{
             transform: rotate(-11deg);
             margin-right: 24px;

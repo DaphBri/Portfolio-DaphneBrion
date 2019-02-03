@@ -293,7 +293,7 @@ main {
 
         .me-text {
             font-family: 'Ubuntu', sans-serif;
-            font-size: 1.6em;
+            font-size: 1.5em;
             line-height: 40px;
             color: #65625d;
 
@@ -311,12 +311,25 @@ main {
                 font-size: 1.4em;
                 line-height: 35px;
             }
+            a{
+                text-decoration: none;
+                color: #65625d;
+            }
         }
-
+        .icons{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0 90px;
+            border-bottom: 1px solid #c4bfbf;
+            img{
+                width: 8%;
+            }
+        }
         .buttonsCV {
             .CVs {
                 display: flex;
-                justify-content: space-between;
+                justify-content: center;
                 flex-wrap: wrap;
                 margin: 30px 0 5px;
 
@@ -331,9 +344,6 @@ main {
                         font-size: 1em;
                         text-decoration: none;
                         color: #767766;
-                        &:hover{
-                            color: #fcef37;
-                        }
                     }
 
                 }
@@ -352,7 +362,19 @@ main {
                             color: #fcef37;
                         }
                     }
-                }               
+                }   
+                .cv-pdf{
+                    width: 30%;
+                    min-width: 158px;
+                    text-align: right;
+                    @media screen and (max-width: 540px) {
+                        text-align: center;
+                        margin-top: 40px;
+                    }
+                     img{
+                         width: 60%;
+                     }
+                }           
             }
         }
     }
@@ -372,7 +394,7 @@ section.contact {
     }
 
     @media screen and (min-width: 1200px) {
-        padding-bottom: 300px;
+        padding-bottom: 250px;
     }
 }
 
@@ -513,14 +535,6 @@ section.contact {
                 font-size: 1em;  
             }
        } 
-    //    .header{
-    //     padding-top: 30px;
-    //         .headerWrapper{
-    //             &::before{
-    //                 height: 345px;
-    //             }
-    //         }
-    //     }
     }
 }
 //Page Work-Content
