@@ -1,100 +1,101 @@
-main {
-    width: 100%;
 
-    .banner-fix {
-        position: fixed;
-        top: -1400px;
-        left: 0;
+.banner-fix {
+    position: fixed;
+    top: -1400px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 15;
+
+    &.active {
+        top: 0;
+    }
+
+    transition: all 0.3s ease-in-out;
+    @media screen and (max-width: 640px) {
+        height: 40px;
+    }
+
+    @media screen and (min-width: 640px) and (max-width: 940px) {
+        height: 50px;
+    }
+    .banner {
+        position: relative;
+        font-family: 'Roboto Condensed', sans-serif;
+        color: #767766;
+        font-size: 1.8em;
         width: 100%;
         height: 60px;
-        z-index: 15;
 
-        &.active {
-            top: 0;
-        }
-
-        transition: all 0.3s ease-in-out;
         @media screen and (max-width: 640px) {
+            font-size: 1.4em;
             height: 40px;
         }
 
         @media screen and (min-width: 640px) and (max-width: 940px) {
+            font-size: 1.6em;
             height: 50px;
         }
-        .banner {
-            position: relative;
-            font-family: 'Roboto Condensed', sans-serif;
-            color: #767766;
-            font-size: 1.8em;
-            width: 100%;
+
+        img {
+            width: 100vw;
             height: 60px;
 
             @media screen and (max-width: 640px) {
-                font-size: 1.4em;
                 height: 40px;
             }
 
             @media screen and (min-width: 640px) and (max-width: 940px) {
-                font-size: 1.6em;
                 height: 50px;
             }
+        }
 
-            img {
-                width: 100vw;
+        .fix {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+
+            .fix-bloc {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100px;
                 height: 60px;
 
                 @media screen and (max-width: 640px) {
                     height: 40px;
+                    width: 80px;
                 }
 
                 @media screen and (min-width: 640px) and (max-width: 940px) {
                     height: 50px;
+                    width: 90px;
                 }
-            }
 
-            .fix {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-evenly;
-                align-items: center;
+                a {
+                    text-decoration: none;
+                    color: #c4bfbf;
+                    padding: 0;
+                    transition: all 0.3s ease-in-out;
+                    text-align: center;
 
-                .fix-bloc {
-                    position: relative;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    width: 100px;
-                    height: 60px;
-
-                    @media screen and (max-width: 640px) {
-                        height: 40px;
-                        width: 80px;
-                    }
-
-                    @media screen and (min-width: 640px) and (max-width: 940px) {
-                        height: 50px;
-                        width: 90px;
-                    }
-
-                    a {
-                        text-decoration: none;
-                        color: #c4bfbf;
-                        padding: 0;
-                        transition: all 0.3s ease-in-out;
-                        text-align: center;
-
-                        &:hover {
-                            color: #fcef37;
-                        }
+                    &:hover {
+                        color: #fcef37;
                     }
                 }
             }
         }
     }
+}
+
+main {
+    //width: 100%;
 
     // section1 work
     section {
@@ -149,7 +150,7 @@ main {
                         color: #c4bfbf;
 
                         span {
-                            color: #fcef37;
+                            color: #fcce37;
                         }
 
                         @media screen and (max-width: 640px) {
@@ -271,7 +272,7 @@ main {
                             .title {
                                 font-family: 'Varela Round', sans-serif;
                                 font-size: 4em;
-                                margin: 129px 35px 35px;
+                                margin: 129px 20px 35px;
 
                                 @media screen and (max-width: 540px) {
                                     font-size: 3em;
@@ -359,7 +360,7 @@ main {
                         text-decoration: none;
                         color: #767766;
                         &:hover{
-                            color: #fcef37;
+                            color: #fcce37;
                         }
                     }
                 }   
@@ -488,7 +489,7 @@ section.contact {
                     font-size: 2.5em;
                     color: #65625d;
                     display: inline-block;
-                    background: #fcef37;
+                    background: #fcce37;
                     border: 2px solid #65625d;
                     border-radius: 40px;
                     width: 80px;
@@ -498,9 +499,9 @@ section.contact {
                     transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
                     &:hover {
-                        border: 2px solid #fcef37;
+                        border: 2px solid #fcce37;
                         background: #65625d77;
-                        color: #fcef37;
+                        color: #fcce37;
                     }
                 }
             }
@@ -529,7 +530,7 @@ section.contact {
             z-index: 1;
             &:hover {
                 
-                color: #fcef37;
+                color: #fcce37;
             }
             @media screen and (max-width: 640px) {
                 font-size: 1em;  
@@ -619,7 +620,7 @@ section.contact {
             cursor: pointer;
             &.active{
                 background: #ffffff00;
-                border:2px solid #fcef37;
+                border:2px solid #fcce37;
                 a img{
                     width: 120%;
                     height: 120%;
@@ -746,7 +747,7 @@ section.contact {
                 text-align: center;
                 transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
                 color: #65625d;
-                background: #fcef37;
+                background: #fcce37;
                 @media screen and (min-width: 640px) and (max-width: 940px) {
                     // font-size: 2.5em;
                     // border-radius: 40px;
@@ -761,9 +762,9 @@ section.contact {
                     align-self: center;
                 }
                 &:hover {
-                    border: 2px solid #fcef37;
+                    border: 2px solid #fcce37;
                     background: #65625d77;
-                    color: #fcef37;
+                    color: #fcce37;
                 }
             }
 
